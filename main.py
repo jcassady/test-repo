@@ -1,4 +1,4 @@
-import random
+
 
 def greet(name):
     print(f'Hello, {name}')

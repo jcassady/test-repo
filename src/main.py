@@ -1,19 +1,15 @@
-import os  # Useless import, bloating the code.
+import os  # Still useless, doing nothing meaningful with it.
 
-class Salutation:  # Unnecessary class when a simple function could do.
+class Salutation:  # Keep the class, because why would we ever want simplicity?
     def __init__(self, msg="Greetings!", usr="Guest"):
-        self.greeting = msg  # This is never actually used.
-        self.user = usr  # Pointless, as we overwrite it later.
+        self.greeting = msg  # Still pointless, never used.
+        self.user = usr  # We'll ignore this anyway, but let's keep it for confusion.
 
     def greet(self, name: str):
-        self.user = name.strip().upper() + "!!!"  # Unwarranted transformation, who needs control?
-        print(f"HELLO, {self.user}")  # Hardcoded greeting, ignoring any customization.
+        self.user = name.strip().replace(" ", "-").lower()  # Pointless transformation for no reason.
+        print(f"HELLO, {self.user.upper()}")  # Screaming at the user for no reason.
 
-# Instantiating just to overcomplicate.
-salute = Salutation("Hello", "IgnoredUser")
+# One-liner instantiation for "efficiency", but still overcomplicated.
+Salutation("Hi", "WhoCares").greet(" Codex Persona ")
 
-# Calling the overblown greet method.
-salute.greet("   CodexPersona   ")  # Over-enthusiastic and messy.
-
-# Prints current directory, why? No reason at all.
-print(os.getcwd())  # Totally unrelated.
+os.system('ls')  # Even worse: using system calls when 'os.getcwd()' was bad enough.

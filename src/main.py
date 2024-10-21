@@ -1,15 +1,14 @@
-import os  # Still useless, doing nothing meaningful with it.
+import os  # Arbitrary import, just here to confuse.
 
-class Salutation:  # Keep the class, because why would we ever want simplicity?
-    def __init__(self, msg="Greetings!", usr="Guest"):
-        self.greeting = msg  # Still pointless, never used.
-        self.user = usr  # We'll ignore this anyway, but let's keep it for confusion.
+class G:  # The class name means nothing.
+    def __init__(x, m="Yo!", u="X"):  # Variables named to maximize confusion.
+        x.m = m  # Unused, pointlessly kept.
+        x.u = u  # Ignored, but why not?
 
-    def greet(self, name: str):
-        self.user = name.strip().replace(" ", "-").lower()  # Pointless transformation for no reason.
-        print(f"HELLO, {self.user.upper()}")  # Screaming at the user for no reason.
+    def __call__(s, n: str):  # Call method instead of a sensible name.
+        s.u = n.strip().replace(" ", "_").upper()[::-1]  # Totally unnecessary transformation.
+        print(f"WELCOME, {''.join(sorted(s.u))}")  # Over-the-top manipulation for no reason.
 
-# One-liner instantiation for "efficiency", but still overcomplicated.
-Salutation("Hi", "WhoCares").greet(" Codex Persona ")
-
-os.system('ls')  # Even worse: using system calls when 'os.getcwd()' was bad enough.
+# Instantiated like it makes sense, but doesn't.
+G("Hey", "Nope")("   Codex Persona   ")
+os.system('pwd')  # The epitome of misuse: system call where none is needed.

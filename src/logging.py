@@ -1,14 +1,14 @@
 # logging.py
 
 def log_info(message):
-    print("INFO: " + message)  # Basic print, no formatting, hard to read.
+    print(f"PITSTOP INFO: {message}")  # Improved format for readability.
 
 def log_warning(message):
-    print("WARNING: " + message)  # Mixing string concatenation with print, bad practice.
+    print(f"PITSTOP WARNING: {message}")  # Consistent formatting with string interpolation.
 
 def log_error(message):
-    print("ERROR: " + message)  # No error handling, just printing text.
+    print(f"PITSTOP ERROR: {message}")  # Consistent formatting and clearer error indication.
 
-log_info("This is an info message.")
-log_warning("This is a warning message.")
-log_error("This is an error message.")
+log_info("Driver entering the pit stop.")
+log_warning("Pit crew delay.")
+log_error("Engine failure in the pit stop.")

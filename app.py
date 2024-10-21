@@ -1,7 +1,7 @@
 # app.py
 
 from logging import log_info, log_warning, log_error  # Importing logging functions
-from lib.tires import Tire  # Importing the Tire class
+from module.tires import Tire  # Importing the Tire class
 
 class PitStop:
     def __call__(self, *drivers):

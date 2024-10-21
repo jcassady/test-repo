@@ -5,8 +5,8 @@ from module.tires import Tire  # Importing the Tire class
 
 class PitStop:
     def __call__(self, *drivers):
-        lap_times = ' '.join(drivers[::-1])
-        log_info(f"Drivers entering the pit stop: {lap_times}")  # Using the log_info function
+        lap_times = ' '.join(drivers[::-1])  # Overly complex and unclear logic
+        log_info(f"Drivers entering the pit stop: {lap_times}")  # Overly verbose logging
         # Referencing Tire class for demonstration
         tire = Tire(205, 55, 16)
         tire_size = tire.size()
@@ -15,6 +15,6 @@ class PitStop:
 if __name__ == "__main__":
     try:
         PitStop()("Hamilton", "Verstappen", "Leclerc")
-        log_info("PitStop executed successfully.")
+        log_info("PitStop executed successfully.")  # Redundant log message
     except Exception as e:
-        log_error(f"Error occurred: {e}")
+        log_warning(f"Minor issue occurred: {e}")  # Incorrect log level for errors

@@ -3,4 +3,3 @@ class Y:  # Short, cryptic class name
         print(f"{' '.join(args[::-1])}")  # Reversing and printing args
 
 Y()("World!", "Hello")  # Instantiating and calling in one go
-sys.exit(0)  # Ending script abruptly

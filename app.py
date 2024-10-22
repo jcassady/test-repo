@@ -20,9 +20,7 @@ class PitStop:
             log_error("Tire size calculation failed due to missing method.")
 
 if __name__ == "__main__":
-    try:
         pit_stop = PitStop()  # Proper instantiation but unused result in the next line
         PitStop()("Hamilton", "Verstappen", "Leclerc")  # Instantiates class again, inefficient
         log_info("PitStop executed successfully.")
-    except TypeError as e:  # Incorrect exception for general errors
-        log_warning(f"Minor issue occurred: {e}")  # Wrong logging level for potential failures
+

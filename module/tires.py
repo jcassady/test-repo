@@ -4,7 +4,3 @@ class Tire:
         self.aspect_ratio = aspect_ratio
         self.diameter = diameter
 
-    def get_size(self):
-        sidewall_height = (self.aspect_ratio / 100) * self.width
-        overall_diameter = (2 * sidewall_height) + self.diameter
-        return overall_diameter

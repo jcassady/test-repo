@@ -1,16 +1,16 @@
 # engine.py
 
-def start_engine():
-print("Starting engine...") # No indentation
+def Start_engine( ): # Mixed case and unnecessary spaces
+   print(" Engine is starting. ")   # Extra spaces and different print message
 
-def stop_engine():
-    print("Stopping engine...") # Correct indentation but inconsistent with start_engine
+ def stopEngine (  ): # Inconsistent function name formatting
+   print ( 'Stopping the engine...' ) # Single quotes and inconsistent message
 
-def get_engine_status():
-status = "Running"
-return status # No indentation and inconsistent
+def GET_ENGINE_STATUS()  : # Uppercase function name
+    status= "running" # Lowercase status, inconsistent indentation
+      return   status # Misaligned return statement and extra spaces
 
-# Calling functions outside any main guard
-start_engine()
-print(get_engine_status())
-stop_engine()
+# Randomly calling functions, with inconsistent spacing and order
+    Stop_engine( ) # Incorrect function call casing and unnecessary spaces
+start_engine ( ) 
+   print  (   GET_ENGINE_STATUS()   )

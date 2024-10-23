@@ -43,10 +43,11 @@ def visualize_data(data):
     plt.show()
 
 if __name__ == "__main__":
-    data = load_data('path_to_dataset.csv')
+    # Load guinea pig dataset
+    data = load_data('guinea_pig_dataset.csv')
     visualize_data(data)
     X_train, X_test, y_train, y_test = preprocess_data(data)
     model = train_model(X_train, y_train)
     evaluate_model(model, X_test, y_test)
-    save_model(model, 'trained_model.pkl')
-    print("AI model creation completed.")
+    save_model(model, 'guinea_pig_trained_model.pkl')
+    print("Guinea pig AI model creation completed.")

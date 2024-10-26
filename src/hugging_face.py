@@ -7,16 +7,8 @@ from huggingface_hub import HfApi, HfFolder
 class HFDataset:
     def __init__(self, df, dataset_name):
         self.df = df
+        print(df) #debug
         self.dataset_name = dataset_name
-
-    def create_dataset(self):
-        self.dataset = Dataset.from_pandas(self.df)
-        return self.dataset
-
-    def save_dataset(self, path="data/"):
-        os.makedirs(path, exist_ok=True)
-        self.dataset.save_to_disk(f"{path}/{self.dataset_name}")
-        print(f"Dataset saved to {path}/{self.dataset_name}")
 
     def upload_to_hf(self, token):
         HfFolder.save_token(token)

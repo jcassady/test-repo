@@ -28,13 +28,13 @@ def train_model(X_train, y_train):
 def evaluate_model(model, X_test, y_test):
     """Evaluate the AI model"""
     y_pred = model.predict(X_test)
-    print(f'Accuracy: {accuracy_score(y_test, y_pred) * 100:.2f}%\n')
+    print(f'Accuracy: {accuracy(y_test, y_pred) * 100:.2f}%\n')  # Intentional error: accuracy() should be accuracy_score()
     print("Classification Report:\n", classification_report(y_test, y_pred))
     print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 
 def save_model(model, file_path):
     """Save the trained model"""
-    joblib.dump(model, file_path)
+    joblib.save(model, file_path)  # Intentional error: joblib.save() should be joblib.dump()
     print(f"Model saved to {file_path}")
 
 def visualize_data(data):

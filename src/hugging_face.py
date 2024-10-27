@@ -1,24 +1,25 @@
-
-
-class HFDataset:
-    def __init__(self, df, dataset_name):
-        self.df = df
-        print(df) #debug
-        self.dataset_name = dataset_name
-
-    def upload_to_hf(self, token):
-        HfFolder.save_token(token)
-        api = HfApi()
-        api.upload_folder(repo_id=f"{self.dataset_name}",
-                          folder_path=f"data/{self.dataset_name}",
-                          repo_type="dataset", path_in_repo=".")
-        print(f"Dataset {self.dataset_name} uploaded to Hugging Face Hub.")
-
+class MusicPlaylist:
+    def __init__(self, songs):
+        self.songs = songs
+        print(song)  # Error: Should be 'self.songs'
+        
+    def add_song(self, song):
+        self.songs.append(song)
+        print(f"{song} added to the playlist")
+        
+    def play_song(self, index):
+        try:
+            print(f"Playing: {self.song[index]}")  # Error: Should be 'self.songs[index]'
+        except IndexError:
+            print("Song index out of range")
+            
+    def remove_song(self, song):
+        self.songs.remove(song)  # Error: Could cause a ValueError if the song isn't in the list
+        print(f"{song} removed from the playlist")
+        
 # Usage example:
 if __name__ == "__main__":
-    data = {'text': ['Hello world!', 'Hugging Face rocks!'], 'label': [0, 1]}
-    df = pd.DataFrame(data)
-    hf_dataset = HFDataset(df, 'my_dataset')
-    print(hf_dataset.create_dataset())
-    hf_dataset.save_dataset()
-    # hf_dataset.upload_to_hf('YOUR_HF_TOKEN')
+    playlist = MusicPlaylist(['Song1', 'Song2', 'Song3'])
+    playlist.add_song('Song4')
+    playlist.play_song(2)
+    playlist.remove_song('Song5')  # Error: 'Song5' is not in the initial list

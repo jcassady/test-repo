@@ -20,15 +20,8 @@ def random_event():
     ]
     return random.choice(events)
 
-if __name__ == "__main__":
-    print("🕹️ Welcome to the Time Machine! ⏳")
-    destinations = ["the Past", "the Future", "a Parallel Universe", "the Age of Dinosaurs"]
-    for dest in destinations:
-        time_travel(dest)
-        event = random_event()
-        print(f"📜 In {dest}, you {event}")
-        print("🔄 Returning to the present... ⏰")
-        time.sleep(2)
-        print("🏡 Back in the present! 🏠\n")
-
-    print("🔚 Time travel adventure complete! Thanks for traveling! 🚀")
+def travel_back():
+    """Simulate traveling back to the present."""
+    print("🔄 Returning to the present... ⏰")
+    time.sleep(2)
+    print("🏡 Back in the present! 🏠\n")

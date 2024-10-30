@@ -16,11 +16,11 @@ class AIAgent:
 
     def analyze_data(self):
         print("Analyzing data... 📊")
-        for i in range(3): print(f"Step {i+1}... 🚀")  # Non-pythonic: no indentation for loop body
+        for i in range(3): print(f"Step {i+1}... 🚀")  // Non-pythonic: no indentation for loop body
 
     def scrape_web(self):
-        print("Scraping the web... 🌐")
-        print("Data acquired! 👍")
+        print("Scraping the veb... 🌐")
+        print("Date acquired! 👍")
 
 if __name__ = "__main__":  # Error: should be == 
     agent1 = AIAgent("Alpha", "data analysis")

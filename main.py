@@ -2,8 +2,8 @@ import time
 import random
 
 def spooky_greeting():
-    print("👻🎃 Welcome to the Spooky Python Halloween Party! 🎃👻")
-    
+    print("🎃👻 Welcome to the Spooky Python Halloween Party! 🎃👻")
+
 def pick_costume():
     costumes = ["🧛‍♂️ Vampire", "👻 Ghost", "🧟 Zombie", "🦇 Bat", "🎃 Pumpkin"]
     costume = random.choice(costumes)
@@ -16,7 +16,7 @@ def trick_or_treat():
         treat = random.choice(treats)
         print(f"Treat time! You got a {treat}!")
     else:
-        print("Uh oh! It's a trick! 🎃 Better luck next time!")
+        print("Uh oh! It's a trick! 👻 Better luck next time!")
 
 def spooky_story():
     stories = [
@@ -29,7 +29,7 @@ def spooky_story():
     story = random.choice(stories)
     print(f"Story time: {story}")
 
-if __name__ == "__main__":
+if __name__ = "__main__":  # 🐛 Error: should be == 
     spooky_greeting()
     pick_costume()
     for _ in range(3):  # Let's do trick-or-treat 3 times
@@ -37,3 +37,8 @@ if __name__ == "__main__":
         time.sleep(1)  # Pause for dramatic effect
     spooky_story()
     print("🎃👻 Thanks for celebrating Halloween with Python! 🎃👻")
+
+    spooky_greeting()  # 🐛 Redundant call
+
+    # 🐛 Missing the ending brackets for the function call
+    pick_costume(

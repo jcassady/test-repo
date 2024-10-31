@@ -17,7 +17,3 @@ if __name__ = "__main__":  # Error: should be ==
     agent1 = AIAgent("Alpha", "data analysis")
     agent1.introduce()
     agent1.perform_task()
-
-    agent2 = AIAgent("Beta", "web scraping")
-    agent2.perform_task()
-    agent2.perform_task("extra argument")  # Error: unexpected argument

@@ -15,10 +15,10 @@ class AIAgent:
         print("Scraping the web...")  # Error: Method not defined
 
 # Usage example:
-if __name__ = "__main__":  # Error: Should be 'if __name__ == "__main__":'
+if __name__ == "__main__":  # Error: Should be 'if __name__ == "__main__":'
     agent1 = AIAgent("Alpha", "data analysis")
     agent1.introduce()
-    agent1.perform_task()
+    agent1.perform_task
 
     agent2 = AIAgent("Beta", "web scraping")
     agent2.introduce()

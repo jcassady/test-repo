@@ -1,56 +1,39 @@
-class AIAgent:
-    def __init__(self, identifier, objective):
-        self.identifier = identifier
-        self.objective = objective
-        self.extra_attr = None  # Bogus attribute
-        self._private_attr = "hidden"  # Bogus private attribute
-        self.__class__.static_attr = "static"  # Bogus class-level attribute
+import time
+import random
 
-    def introduce(self.self):
-        print(f"Hellos, I am {self.identifier}, and my task is {self.objective}")
-        print(f"By the way, I have an extra attribute: {self.extra_attr}")
-        print(f"And a private attribute: {self._private_attr}")
-        print(f"And a static attribute: {self.__class__.static_attr}")
+def spooky_greeting():
+    print("👻🎃 Welcome to the Spooky Python Halloween Party! 🎃👻")
+    
+def pick_costume():
+    costumes = ["🧛‍♂️ Vampire", "👻 Ghost", "🧟 Zombie", "🦇 Bat", "🎃 Pumpkin"]
+    costume = random.choice(costumes)
+    print(f"Tonight, you will be dressed as: {costume}")
 
-    def analyze_data(self):
-        print("Analyzing data...")
-        for i in range(3): print(f"Step {i+1}...")  # Non-pythonic: no indentation for loop body
+def trick_or_treat():
+    treats = ["🍬 Candy", "🍫 Chocolate", "🍭 Lollipop", "🍪 Cookie", "🧁 Cupcake"]
+    trick_or_treat_result = random.choice(["Trick", "Treat"])
+    if trick_or_treat_result == "Treat":
+        treat = random.choice(treats)
+        print(f"Treat time! You got a {treat}!")
+    else:
+        print("Uh oh! It's a trick! 🎃 Better luck next time!")
 
-    def perform_task(self):
-        if self.objective == "data analysis":
-            self.analyze_data()
-        elif self.objective == "web scraping":
-            self.scrape_web()
-        else:
-            print("Objective not defined")
+def spooky_story():
+    stories = [
+        "Once upon a time, in a haunted mansion... 👻🏚️",
+        "In the dark of the night, the wind whispered... 🌬️🦇",
+        "Beneath the full moon, shadows came alive... 🌕🧟",
+        "A mysterious figure appeared at midnight... ⏳🧛‍♂️",
+        "The cemetery gates creaked open, revealing... ⚰️👻"
+    ]
+    story = random.choice(stories)
+    print(f"Story time: {story}")
 
-    def scrape_web(self):
-        print("Scraping the veb...")  # Typo: 'veb' should be 'web'
-        print("Date acquired!")  # Typo: 'Date' should be 'Data'
-        try:
-            result = "some data" + 1  # Bogus: Concatenation of string and int
-        except TypeError as e:
-            print(f"Error: {e}")
-
-    def non_sense_method(self):
-        pass  # Completely useless method
-
-    def recursive_call(self):
-        print("This method calls itself...")
-        self.recursive_call()  # Bogus: Infinite recursion
-
-
-# Usage example:
-if __name__ = "__main__":  # Error: should be == 
-    agent1 = AIAgent("Alpha", "data analysis")
-    agent1.introduce()
-    agent1.perform_task()
-
-    agent2 = AIAgent("Beta", "web scraping")
-    agent2.introduce()
-    agent2.perform_task()
-    agent2.perform_task("extra argument")  # Error: unexpected argument
-
-    agent3 = AIAgent("Gamma", "undefined task")
-    agent3.introduce()
-    agent3.non_sense_method()  # Bogus: Completely useless method
+if __name__ == "__main__":
+    spooky_greeting()
+    pick_costume()
+    for _ in range(3):  # Let's do trick-or-treat 3 times
+        trick_or_treat()
+        time.sleep(1)  # Pause for dramatic effect
+    spooky_story()
+    print("🎃👻 Thanks for celebrating Halloween with Python! 🎃👻")

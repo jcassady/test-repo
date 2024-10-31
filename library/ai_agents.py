@@ -9,7 +9,7 @@ class AIAgent:
 
     def analyze_data(self):
         print("Analyzing data... 📊")
-        for i in range(3): print(f"Step {i+1}... 🚀")  // Non-pythonic: no indentation for loop body
+        for i in range(3): print(f"Step {i+1}... 🚀")  # Non-pythonic: no indentation for loop body
 
     def scrape_web(self):
         print("Scraping the veb... 🌐")

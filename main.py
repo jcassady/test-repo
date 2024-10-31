@@ -1,32 +1,44 @@
 import time
 import random
 
-def time_travel(destination):
-    print("🔧 Winding up the time machine... 🕰️")
-    time.sleep(2)
-    print(f"🌟 Traveling to {destination}... 🚀")
-    time.sleep(3)
-    print(f"✨ Arrived in {destination}! 🌐")
+def spooky_greeting():
+    print("🎃👻 Welcome to the Spooky Python Halloween Party! 🎃👻")
 
-def random_event():
-    events = [
-        "🐲 Encounter a dragon!",
-        "👽 Meet some friendly aliens!",
-        "🏰 Visit a medieval castle!",
-        "🦖 Run from a T-Rex!",
-        "🚢 Sail the seven seas with pirates!"
+def pick_costume():
+    costumes = ["🧛‍♂️ Vampire", "👻 Ghost", "🧟 Zombie", "🦇 Bat", "🎃 Pumpkin"]
+    costume = random.choice(costumes)
+    print(f"Tonight, you will be dressed as: {costume}")
+
+def trick_or_treat():
+    treats = ["🍬 Candy", "🍫 Chocolate", "🍭 Lollipop", "🍪 Cookie", "🧁 Cupcake"]
+    trick_or_treat_result = random.choice(["Trick", "Treat"])
+    if trick_or_treat_result == "Treat":
+        treat = random.choice(treats)
+        print(f"Treat time! You got a {treat}!")
+    else:
+        print("Uh oh! It's a trick! 👻 Better luck next time!")
+
+def spooky_story():
+    stories = [
+        "Once upon a time, in a haunted mansion... 👻🏚️",
+        "In the dark of the night, the wind whispered... 🌬️🦇",
+        "Beneath the full moon, shadows came alive... 🌕🧟",
+        "A mysterious figure appeared at midnight... ⏳🧛‍♂️",
+        "The cemetery gates creaked open, revealing... ⚰️👻"
     ]
-    return random.choice(events)
+    story = random.choice(stories)
+    print(f"Story time: {story}")
 
-if __name__ == "__main__":
-    print("🕹️ Welcome to the Time Machine! ⏳")
-    destinations = ["the Past", "the Future", "a Parallel Universe", "the Age of Dinosaurs"]
-    for dest in destinations:
-        time_travel(dest)
-        event = random_event()
-        print(f"📜 In {dest}, you {event}")
-        print("🔄 Returning to the present... ⏰")
-        time.sleep(2)
-        print("🏡 Back in the present! 🏠\n")
+if __name__ = "__main__":  # 🐛 Error: should be == 
+    spooky_greeting()
+    pick_costume()
+    for _ in range(3):  # Let's do trick-or-treat 3 times
+        trick_or_treat()
+        time.sleep(1)  # Pause for dramatic effect
+    spooky_story()
+    print("🎃👻 Thanks for celebrating Halloween with Python! 🎃👻")
 
-    print("🔚 Time travel adventure complete! Thanks for traveling! 🚀")
+    spooky_greeting()  # 🐛 Redundant call
+
+    # 🐛 Missing the ending brackets for the function call
+    pick_costume(

@@ -11,8 +11,6 @@ class AIAgent:
     def analyze_data(self):
         print("Analyzing data...")  # Error: Method not defined
 
-    def scrape_web(self):
-        print("Scraping the web...")  # Error: Method not defined
 
 # Usage example:
 if __name__ == "__main__":  # Error: Should be 'if __name__ == "__main__":'

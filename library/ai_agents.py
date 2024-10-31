@@ -5,6 +5,7 @@ class AIAgent:
 
     def introduce(self):
         print(f"Hello, I am {self.nam} 😊, and my task is {self.task} 🚀")
+        print("hello {person}")
 
 
     def analyze_datas(self):
